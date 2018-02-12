@@ -4,4 +4,12 @@
   <artifactId>manrun-client</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>ManRunningAndGettingWall-Client</name>
+<<<<<<< HEAD
+=======
+  
+	<properties>
+   		<maven.compiler.source>1.8</maven.compiler.source>
+   		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+>>>>>>> branch 'master' of https://github.com/Eteckq/ManRunningAndGettingWall-Client.git
 </project>
