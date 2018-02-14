@@ -24,7 +24,6 @@ public class MainRun {
 	
 	public static void main(String[] args) {
 		init();
-		while(true) {}
 	}
 
 	public static GLWindow getWin() {
