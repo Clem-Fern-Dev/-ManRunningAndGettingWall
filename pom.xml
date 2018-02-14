@@ -13,36 +13,58 @@
   
   <dependencies>
   	<dependency>
-     <groupId>org.jogamp.jogl</groupId>
-     <artifactId>jogl-all-main</artifactId>
-     <version>2.3.2</version>
-   </dependency>
+   		<groupId>org.jogamp.gluegen</groupId>
+    	<artifactId>gluegen-rt-main</artifactId>
+    	<version>2.3.2</version>
+  	</dependency>
+  	<dependency>
+    	<groupId>org.jogamp.jogl</groupId>
+    	<artifactId>jogl-all-main</artifactId>
+    	<version>2.3.2</version>
+  	</dependency>
   </dependencies>
  
   <build>
+  
   	<plugins>
+  	
   		<plugin>
-  			<artifactId>maven-assembly-plugin</artifactId>
-  			<configuration>
-    			<archive>
-      				<manifest>
-        				<mainClass>fr.manrun.client.MainRun</mainClass>
-      				</manifest>
-    			</archive>
-    			<descriptors>
-      				<descriptor>src/main/assembly/application.xml</descriptor>
-    			</descriptors>
-  			</configuration>
-  			<executions>
-    			<execution>
-      				<id>make-assembly</id>
-      				<phase>package</phase>
-      				<goals>
-        				<goal>single</goal>
-      				</goals>
-    			</execution>
-  			</executions>
-		</plugin>
+      		<artifactId>maven-assembly-plugin</artifactId>
+       		<configuration>
+        		<archive>
+          			<manifest>
+            			<mainClass>fr.manrun.client.MainRun</mainClass>
+          			</manifest>
+        		</archive>
+        		<descriptorRefs>
+          			<descriptorRef>jar-with-dependencies</descriptorRef>
+        		</descriptorRefs>
+      		</configuration>
+    	</plugin>
+    	
+    	<plugin>
+      		<groupId>org.apache.maven.plugins</groupId>
+      		<artifactId>maven-compiler-plugin</artifactId>
+      		<version>2.0.2</version>
+      		<configuration>
+        		<source>1.6</source>
+        		<target>1.6</target>
+      		</configuration>
+    	</plugin>
+    
+    	<plugin>
+      		<groupId>org.codehaus.mojo</groupId>
+      		<artifactId>exec-maven-plugin</artifactId>
+      		<version>1.2.1</version>
+      		<configuration>
+        		<mainClass>fr.manrun.client.MainRun</mainClass>
+      		</configuration>
+    	</plugin>
+    	
+  		
+		
   	</plugins>
+  	
   </build>
+  
 </project>
