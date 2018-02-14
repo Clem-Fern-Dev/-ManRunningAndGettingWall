@@ -20,13 +20,15 @@ public class MainRun {
 		win.setSize(1280, 720);
 		win.setResizable(false);
 		
-		win.setVisible(true);
+		win.setVisible(true);		
+
+    win.setTitle("ManRun");
 		System.out.println("Fin de l'affichage");
+
 	}
 	
 	public static void main(String[] args) {
 		init();
-		while(true) {}
 	}
 
 	public static GLWindow getWin() {
