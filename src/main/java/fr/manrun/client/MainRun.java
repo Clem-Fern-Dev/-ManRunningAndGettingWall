@@ -4,6 +4,8 @@ import com.jogamp.newt.opengl.GLWindow;
 import com.jogamp.opengl.GLCapabilities;
 import com.jogamp.opengl.GLProfile;
 
+import jogamp.common.Debug;
+
 public class MainRun {
 	
 	private static GLWindow win = null;
@@ -18,10 +20,11 @@ public class MainRun {
 		win.setSize(1280, 720);
 		win.setResizable(false);
 		
-		win.setVisible(true);
-		
-		win.setTitle("ManRun");
-		
+		win.setVisible(true);		
+
+    win.setTitle("ManRun");
+		System.out.println("Fin de l'affichage");
+
 	}
 	
 	public static void main(String[] args) {
