@@ -19,7 +19,6 @@ public class MainRun {
 		win.setResizable(false);
 		
 		win.setVisible(true);
-		
 	}
 	
 	public static void main(String[] args) {
