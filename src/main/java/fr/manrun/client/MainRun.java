@@ -20,6 +20,8 @@ public class MainRun {
 		
 		win.setVisible(true);
 		
+		win.setTitle("ManRun");
+		
 	}
 	
 	public static void main(String[] args) {
